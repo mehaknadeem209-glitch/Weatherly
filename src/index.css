@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+:root {
+  /* ===== Backgrounds ===== */
+  --bg-primary: #1f242b;
+  --bg-secondary: #2b3138;
+  --bg-surface: #343b43;
+  --bg-card: #4a4a4a;
+  --bg-hover: #555555;
+
+  /* ===== Text ===== */
+  --text-primary: #ffffe3;
+  --text-secondary: #cbcbcb;
+  --text-muted: #9ca3af;
+  --text-disabled: #707070;
+
+  /* ===== Brand Colors ===== */
+  --primary: #6d8196;
+  --primary-hover: #7d91a6;
+  --primary-light: #93a5b8;
+  --accent: #88b8ff;
+
+  /* ===== Borders ===== */
+  --border: #575757;
+  --border-light: #6a6a6a;
+
+  /* ===== Input ===== */
+  --input-bg: #353535;
+  --input-border: #575757;
+  --input-focus: #6d8196;
+  --placeholder: #8d8d8d;
+
+  /* ===== Buttons ===== */
+  --btn-primary: #6d8196;
+  --btn-primary-hover: #7d91a6;
+  --btn-secondary: #4a4a4a;
+  --btn-secondary-hover: #5b5b5b;
+
+  /* ===== Weather Colors ===== */
+  --sunny: #ffd166;
+  --cloudy: #b8c1cc;
+  --rainy: #4f8dd8;
+  --storm: #6f5ea8;
+  --snow: #e8f4ff;
+  --wind: #8fc5d6;
+
+  /* ===== Status ===== */
+  --success: #4caf7d;
+  --warning: #e3b341;
+  --danger: #d66a6a;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+  /* ===== Effects ===== */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* ===== Gradient ===== */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #6d8196 0%,
+    #4a4a4a 100%
+  )
+}
+body {
+  background: linear-gradient(
+   90deg ,
+    var(--bg-primary) 10%,
+    var(--bg-secondary)50%,
+    var(--bg-surface) 100%
+  
+  );
+
+ opacity:0.8;
+  color: var(--text-primary);
+}
+.navlink{
+    position:relative
+}
+a .navlink::after{
+    content:"";
+    height: 2px;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color: var(--border-light);
+    transform :scaleX(0);
+    transform-origin: left;
+    transition:transform 0.3s ease 
+}
+a .navlink:hover::after{
+   transform: scaleX(1);
+}
